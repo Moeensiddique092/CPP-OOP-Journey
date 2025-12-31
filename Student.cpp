@@ -2,10 +2,11 @@
 #include<iostream>
 using namespace std;
 
-Student::Student(string n, int g){
-    name = n;
+Student::Student(string n, int g) : Person(n)
+{
     if (g < 0){
         cout << "Error! grades cannot be nagative." <<endl;
+        gradeLevel = 0;
     } else{
         gradeLevel = g;
     }

@@ -1,12 +1,12 @@
 #pragma once
+#include "Person.h"
 #include<iostream>
 #include<string>
 using namespace std;
 
-class Student
+class Student : public Person
 {
 private:
-    string name;
     int gradeLevel;
 public:
 

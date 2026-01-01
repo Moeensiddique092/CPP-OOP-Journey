@@ -14,5 +14,8 @@ int main(){
     T1.introduceSelf();
     T1.setSalary(60000);
     cout << "Salary updated to " << T1.getSalary() << endl;
+
+    Person* ptr = &T1;
+    ptr->introduceSelf();
     return 0;
 }

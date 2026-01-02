@@ -13,7 +13,5 @@ public:
         name = n;
     }
 
-    virtual void introduceSelf(){
-        cout << "My name is " << name << endl;
-    }
+    virtual void introduceSelf() = 0;
 };

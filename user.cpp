@@ -6,6 +6,7 @@ class user
 {
 private:
     int id;
+    string name;
 public:
     static int userCount;
 
@@ -14,6 +15,13 @@ public:
         userCount++;
         id = userCount;
         cout << "User " << id << " created." << endl;
+        name = "Unknown";
+    }
+    user(string n){
+        userCount++;
+        id = userCount; 
+        name = n;
+        cout << "User " << id << " created." << endl;  
     }
 
     //Distructor
@@ -25,6 +33,10 @@ public:
     static void displayTotalUser(){
         cout << "Total users: " << userCount << endl;
     }
+
+    void Display(){
+        cout << "ID: " << id << " Name: " << name << endl;
+    }
 };
 
 int user::userCount = 0;
@@ -32,7 +44,7 @@ int user::userCount = 0;
 int main(){
 
     user u1;
-    user u2;
+    user u2("Moeen");
     {
         
         cout << " entering Inner Block" << endl;
@@ -40,8 +52,9 @@ int main(){
     }
     cout << "leaving inner block." << endl;
 
+    u1.Display();
+    u2.Display();
     
-
     user::displayTotalUser();
 
     return 0;
